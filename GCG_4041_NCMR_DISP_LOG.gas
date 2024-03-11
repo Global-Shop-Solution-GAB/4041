@@ -1,0 +1,590 @@
+Program.Sub.ScreenSU.Start
+gui.Form1..create
+gui.Form1..caption("NCMR Disposition Log")
+gui.Form1..size(6915,2835)
+gui.Form1..minx(0)
+gui.Form1..miny(0)
+gui.Form1..position(0,0)
+gui.Form1..event(unload,form1_unload)
+gui.Form1..alwaysontop(False)
+gui.Form1..fontname("Arial")
+gui.Form1..fontsize(8)
+gui.Form1..forecolor(0)
+gui.Form1..fontstyle(,,,,)
+gui.Form1..BackColor(-2147483633)
+gui.Form1..controlbox(True)
+gui.Form1..maxbutton(True)
+gui.Form1..minbutton(True)
+gui.Form1..mousepointer(0)
+gui.Form1..moveable(True)
+gui.Form1..sizeable(False)
+gui.Form1..ShowInTaskBar(True)
+gui.Form1..titlebar(True)
+gui.Form1.txtCntrlNo.create(textbox,"",True,945,300,0,100,400,False,0,Arial,8,-2147483643,1)
+gui.Form1.txtCntrlNo.defaultvalue("")
+gui.Form1.txtCntrlNo.controlgroup(0)
+gui.Form1.lbl1.create(label,"Control No.",True,930,255,1,100,200,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl1.defaultvalue("")
+gui.Form1.lbl1.controlgroup(0)
+gui.Form1.lbl2.create(label,"Seq",True,510,255,1,1100,200,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl2.defaultvalue("")
+gui.Form1.lbl2.controlgroup(0)
+gui.Form1.datepickerDispDate.create(datepicker)
+gui.Form1.datepickerDispDate.visible(True)
+gui.Form1.datepickerDispDate.size(1350,330)
+gui.Form1.datepickerDispDate.zorder(0)
+gui.Form1.datepickerDispDate.position(2100,400)
+gui.Form1.datepickerDispDate.enabled(True)
+gui.Form1.datepickerDispDate.checkbox(False)
+gui.Form1.datepickerDispDate.defaultvalue("")
+gui.Form1.datepickerDispDate.controlgroup(0)
+gui.Form1.lbl3.create(label,"Disposition Date",True,1380,255,1,2100,200,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl3.defaultvalue("")
+gui.Form1.lbl3.controlgroup(0)
+gui.Form1.dropdownlistDispBy.create(dropdownlist)
+gui.Form1.dropdownlistDispBy.visible(True)
+gui.Form1.dropdownlistDispBy.size(2955,330)
+gui.Form1.dropdownlistDispBy.zorder(0)
+gui.Form1.dropdownlistDispBy.position(3500,400)
+gui.Form1.dropdownlistDispBy.enabled(True)
+gui.Form1.dropdownlistDispBy.fontname("Arial")
+gui.Form1.dropdownlistDispBy.fontsize(8)
+gui.Form1.dropdownlistDispBy.defaultvalue("")
+gui.Form1.dropdownlistDispBy.controlgroup(0)
+gui.Form1.lbl4.create(label,"Disposition By:",True,1935,255,1,3500,200,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl4.defaultvalue("")
+gui.Form1.lbl4.controlgroup(0)
+gui.Form1.dropdownlistArea.create(dropdownlist)
+gui.Form1.dropdownlistArea.visible(True)
+gui.Form1.dropdownlistArea.size(3000,330)
+gui.Form1.dropdownlistArea.zorder(0)
+gui.Form1.dropdownlistArea.position(100,1100)
+gui.Form1.dropdownlistArea.enabled(True)
+gui.Form1.dropdownlistArea.fontname("Arial")
+gui.Form1.dropdownlistArea.fontsize(8)
+gui.Form1.dropdownlistArea.defaultvalue("")
+gui.Form1.dropdownlistArea.controlgroup(0)
+gui.Form1.dropdownlistRejPt.create(dropdownlist)
+gui.Form1.dropdownlistRejPt.visible(True)
+gui.Form1.dropdownlistRejPt.size(2985,330)
+gui.Form1.dropdownlistRejPt.zorder(0)
+gui.Form1.dropdownlistRejPt.position(3500,1100)
+gui.Form1.dropdownlistRejPt.enabled(True)
+gui.Form1.dropdownlistRejPt.fontname("Arial")
+gui.Form1.dropdownlistRejPt.fontsize(8)
+gui.Form1.dropdownlistRejPt.defaultvalue("")
+gui.Form1.dropdownlistRejPt.controlgroup(0)
+gui.Form1.lbl5.create(label,"Area:",True,1935,255,1,100,900,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl5.defaultvalue("")
+gui.Form1.lbl5.controlgroup(0)
+gui.Form1.lbl6.create(label,"Rejection Point:",True,1935,255,1,3500,900,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl6.defaultvalue("")
+gui.Form1.lbl6.controlgroup(0)
+gui.Form1.chkIntData.create(checkbox)
+gui.Form1.chkIntData.caption("Internal Inventory Use Only")
+gui.Form1.chkIntData.visible(True)
+gui.Form1.chkIntData.size(3165,255)
+gui.Form1.chkIntData.zorder(0)
+gui.Form1.chkIntData.position(2970,1800)
+gui.Form1.chkIntData.enabled(False)
+gui.Form1.chkIntData.alignment(0)
+gui.Form1.chkIntData.fontname("Arial")
+gui.Form1.chkIntData.fontsize(8)
+gui.Form1.chkIntData.defaultvalue("0")
+gui.Form1.chkIntData.controlgroup(0)
+gui.Form1.cmdSave.create(button)
+gui.Form1.cmdSave.caption("Save")
+gui.Form1.cmdSave.visible(True)
+gui.Form1.cmdSave.size(855,375)
+gui.Form1.cmdSave.zorder(0)
+gui.Form1.cmdSave.position(200,1700)
+gui.Form1.cmdSave.enabled(True)
+gui.Form1.cmdSave.fontname("Arial")
+gui.Form1.cmdSave.fontsize(8)
+gui.Form1.cmdSave.event(click,cmdsave_click)
+gui.Form1.cmdSave.defaultvalue("")
+gui.Form1.cmdSave.controlgroup(0)
+gui.Form1.dropdownlistSeq.create(dropdownlist)
+gui.Form1.dropdownlistSeq.visible(True)
+gui.Form1.dropdownlistSeq.size(855,330)
+gui.Form1.dropdownlistSeq.zorder(0)
+gui.Form1.dropdownlistSeq.position(1100,400)
+gui.Form1.dropdownlistSeq.enabled(True)
+gui.Form1.dropdownlistSeq.fontname("Arial")
+gui.Form1.dropdownlistSeq.fontsize(8)
+gui.Form1.dropdownlistSeq.event(lostfocus,dropdownlistseq_lostfocus)
+gui.Form1.dropdownlistSeq.defaultvalue("")
+gui.Form1.dropdownlistSeq.controlgroup(0)
+gui.Form1.cmdCancel.create(button)
+gui.Form1.cmdCancel.caption("Cancel")
+gui.Form1.cmdCancel.visible(True)
+gui.Form1.cmdCancel.size(855,375)
+gui.Form1.cmdCancel.zorder(0)
+gui.Form1.cmdCancel.position(1100,1700)
+gui.Form1.cmdCancel.enabled(True)
+gui.Form1.cmdCancel.fontname("Arial")
+gui.Form1.cmdCancel.fontsize(8)
+gui.Form1.cmdCancel.event(click,form1_unload)
+gui.Form1.cmdCancel.defaultvalue("")
+gui.Form1.cmdCancel.controlgroup(0)
+gui.Form1.datepickerDispDate.tabstop(True)
+gui.Form1.datepickerDispDate.tabindex(1)
+gui.Form1.dropdownlistDispBy.tabstop(True)
+gui.Form1.dropdownlistDispBy.tabindex(2)
+gui.Form1.dropdownlistArea.tabstop(True)
+gui.Form1.dropdownlistArea.tabindex(3)
+gui.Form1.dropdownlistRejPt.tabstop(True)
+gui.Form1.dropdownlistRejPt.tabindex(4)
+gui.Form1.chkIntData.tabstop(True)
+gui.Form1.chkIntData.tabindex(5)
+gui.Form1.cmdSave.tabstop(True)
+gui.Form1.cmdSave.tabindex(6)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.sNCMR.Declare(String)
+Variable.Global.sIntInvFlag.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Coded By: SFF 10/22/2014
+'Custom NCMR Disposition LOG ***Customer Specific***
+
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sContNo.Declare(String)
+
+
+F.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,"28901","OR",V.Caller.Hook,=,"28910")
+	V.Passed.000168.Set("Disposition Log")
+
+	F.Intrinsic.Variable.SetProperty("GAB-CHK-1","PL",61)
+
+        F.Intrinsic.Variable.SetProperty("GAB-CHK-1","PT",212)
+
+        F.Intrinsic.UI.ChangeCallerProperty(V.Passed.GAB-CHK-1,"HIDE",0)
+
+        F.Intrinsic.UI.ChangeCallerProperty(V.Passed.GAB-CHK-1,"LOCK",0)
+
+        F.Intrinsic.Variable.SetProperty("GAB-LBL-1","PL",80)
+
+        F.Intrinsic.Variable.SetProperty("GAB-LBL-1","PT",212)
+	
+	V.Passed.GAB-LBL-1.Set("Internal Inventory Use Only")
+
+        F.Intrinsic.UI.ChangeCallerProperty(V.Passed.GAB-LBL-1,"HIDE",0)
+
+	F.Intrinsic.Control.CallSub(Setgab-chk-1)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,"28905")
+V.Local.sContNo.Set(V.Passed.000002)
+	F.Intrinsic.Control.If(V.Local.sContNo.Trim,<>,"0")
+		F.Intrinsic.String.LPad(V.Local.sContNo,"0",7,V.Global.sNCMR)
+		'load screen with data for pass NCMR Control No.
+		F.Intrinsic.Control.CallSub(Loadscreen)
+		Gui.Form1..Show
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("Select NCMR Record First","No Record Selected")
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_LOG.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+program.sub.form1_unload.start
+F.Intrinsic.Control.End
+
+program.sub.form1_unload.end
+
+Program.Sub.LoadScreen.Start
+F.Intrinsic.Control.SetErrorHandler("LoadScreen_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.Passed.GAB-CHK-1,=,"Y")
+	Gui.Form1.chkIntData.Value(1)
+	V.Global.sIntInvFlag.Set("Y")
+	F.Intrinsic.Control.CallSub(Flagalliintinvuse)
+F.Intrinsic.Control.Else
+	Gui.Form1.chkIntData.Value(0)
+	V.Global.sIntInvFlag.Set("N")
+	F.Intrinsic.Control.CallSub(Flagalliintinvuse)
+F.Intrinsic.Control.EndIf
+Gui.Form1.txtCntrlNo.Text(V.Global.sNCMR)
+'F.Intrinsic.Debug.InvokeDebugger
+'F.Intrinsic.Debug.Stop
+
+F.Intrinsic.Control.CallSub(Loadseq)
+F.Intrinsic.Control.CallSub(Loadarea)
+F.Intrinsic.Control.CallSub(Loadrejpt)
+F.Intrinsic.Control.CallSub(Loaddispby)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadScreen_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_LOG.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadScreen.End
+
+Program.Sub.LoadArea.Start
+F.Intrinsic.Control.SetErrorHandler("LoadArea_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+Gui.Form1.dropdownlistArea.ClearItems
+F.Intrinsic.String.Concat("select Area from GCG_4041_DSP_AREAMNT",,V.Local.sSql)
+F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+	F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+		V.Local.sRet.set(V.ODBC.conX!rst.FieldValTrim!Area)
+		Gui.Form1.dropdownlistArea.AddItem(V.Local.sRet.Trim)
+	F.ODBC.conX!rst.MoveNext
+	F.Intrinsic.Control.Loop
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rst.Close
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadArea_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_LOG.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadArea.End
+
+Program.Sub.LoadRejPt.Start
+F.Intrinsic.Control.SetErrorHandler("LoadRejPt_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+Gui.Form1.dropdownlistRejPt.ClearItems
+F.Intrinsic.String.Concat("select Rejection_Point from GCG_4041_REJ_PT_MNT",,V.Local.sSql)
+F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+	F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+		V.Local.sRet.Set(V.ODBC.conX!rst.FieldValTrim!Rejection_Point)
+		Gui.Form1.dropdownlistRejPt.AddItem(V.Local.sRet.Trim)
+	F.ODBC.conX!rst.MoveNext
+	F.Intrinsic.Control.Loop
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadRejPt_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_LOG.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadRejPt.End
+
+Program.Sub.LoadDispBy.Start
+F.Intrinsic.Control.SetErrorHandler("LoadDispBy_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+Gui.Form1.dropdownlistDispBy.ClearItems
+F.Intrinsic.String.Concat("select Disposition_By from GCG_4041_DISP_BY_MNT",,V.Local.sSql)
+F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+	F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+		V.Local.sRet.set(V.ODBC.conX!rst.FieldValTrim!Disposition_By)
+		Gui.Form1.dropdownlistDispBy.AddItem(V.Local.sRet.Trim)
+	F.ODBC.conX!rst.MoveNext
+	F.Intrinsic.Control.Loop
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rst.Close
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadDispBy_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_LOG.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadDispBy.End
+
+Program.Sub.LoadSeq.Start
+F.Intrinsic.Control.SetErrorHandler("LoadSeq_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+
+Gui.Form1.dropdownlistSeq.ClearItems
+'load sequences for NCMR # to dropdownlist
+F.Intrinsic.String.Concat("select disposition_seq from v_quality_disp where control_number = '",V.Global.sNCMR,"'",V.Local.sSql)
+F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+	F.Intrinsic.Control.dountil(V.ODBC.conX!rst.EOF,=,True)
+		Gui.Form1.dropdownlistSeq.AddItem(V.ODBC.conX!rst.FieldValLTrim!disposition_seq)
+		F.ODBC.conX!rst.MoveNext
+	F.Intrinsic.Control.Loop
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadSeq_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_LOG.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadSeq.End
+
+program.sub.cmdsave_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sDate.Declare(String)
+V.Local.sChk.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.Form1!chkIntData.Value,=,1)
+	V.Global.sIntInvFlag.Set("Y")
+F.Intrinsic.Control.Else
+	V.Global.sIntInvFlag.Set("N")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Format(V.Screen.Form1!datepickerDispDate.Value,"YYYY-MM-DD",V.Local.sDate)
+
+F.Intrinsic.Control.If(V.Screen.Form1!dropdownlistSeq.Text,<>,"","AND",V.Screen.Form1!dropdownlistArea.Text,<>,"")
+F.Intrinsic.Control.AndIf(V.Screen.Form1!dropdownlistDispBy.Text,<>,"")
+F.Intrinsic.Control.AndIf(V.Screen.Form1!dropdownlistRejPt.Text,<>,"")
+	F.Intrinsic.UI.InvokeWaitDialog("Saving")
+	F.Intrinsic.String.Concat("select * from GCG_4041_NCMR_DSPLOG where CONTROL_NUMBER = '",V.Global.sNCMR,"' and Disposition_Seq = '",V.Screen.Form1!dropdownlistSeq.Text,"'",V.Local.sSql)
+	F.ODBC.Connection!conX.OpenRecordsetRW("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+		F.ODBC.conX!rst.Close
+		F.Intrinsic.string.Concat("update GCG_4041_NCMR_DSPLOG set FLAG_INTERNAL_ONLY ='",V.Global.sIntInvFlag,"', DATE_DISPOSED = '",V.Local.sDate,"',DISPOSITION_BY = '",V.Screen.Form1!dropdownlistDispBy.Text,"',AREA = '",V.Screen.Form1!dropdownlistArea.Text,"',REJECTION_POINT = '",V.Screen.Form1!dropdownlistRejPt.Text,"' where CONTROL_NUMBER = '",V.Global.sNCMR,"' and DISPOSITION_SEQ = '",V.Screen.Form1!dropdownlistSeq.Text,"'",V.Local.sSql)
+		F.ODBC.Connection!conX.Execute(V.Local.sSql)
+	F.Intrinsic.Control.Else
+		F.ODBC.conX!rst.Close
+		F.Intrinsic.String.Concat("insert into GCG_4041_NCMR_DSPLOG VALUES('",V.Global.sNCMR,"','",V.Screen.Form1!dropdownlistSeq.Text,"','",V.Local.sDate,"','",V.Global.sIntInvFlag.Trim,"','",V.Screen.Form1!dropdownlistDispBy.Text,"','",V.Screen.Form1!dropdownlistArea.Text,"','",V.Screen.Form1!dropdownlistRejPt.Text,"')",V.Local.sSql)
+		F.ODBC.Connection!conX.Execute(V.Local.sSql)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Must Fill All Disposition Criteria","No Record Saved")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CallSub(Flagalliintinvuse)
+F.Intrinsic.Control.CallSub(Updgab-chk-1)
+F.Intrinsic.Control.CallSub(Loadarea)
+F.Intrinsic.Control.CallSub(Loaddispby)
+F.Intrinsic.Control.CallSub(Loadrejpt)
+F.Intrinsic.Control.CallSub(Loadseq)
+Gui.Form1.datepickerDispDate.Value(V.Ambient.Date)
+F.Intrinsic.UI.CloseWaitDialog
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_LOG.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdsave_click.end
+
+program.sub.dropdownlistseq_lostfocus.start
+F.Intrinsic.Control.SetErrorHandler("dropdownlistseq_lostfocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.bInList.Declare(Boolean)
+'F.Intrinsic.Debug.InvokeDebugger
+'F.Intrinsic.Debug.Stop
+
+F.Intrinsic.String.Concat("select DATE_DISPOSED,DISPOSITION_BY,AREA,REJECTION_POINT from GCG_4041_NCMR_DSPLOG where CONTROL_NUMBER = '",V.Global.sNCMR,"' and DISPOSITION_SEQ = '",V.Screen.Form1!dropdownlistSeq.Text,"'",V.Local.sSql)
+F.ODBC.Connection!conX.OpenRecordsetRO("rstB",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conX!rstB.EOF,<>,True)
+	Gui.Form1.datepickerDispDate.Value(V.ODBC.conX!rstB.FieldVal!DATE_DISPOSED)
+	
+	V.Local.sRet.Set(V.ODBC.conX!rstB.FieldVal!AREA)
+	Gui.Form1.dropdownlistArea.FindItem(V.Local.sRet.trim,V.Local.bInList)
+	F.Intrinsic.Control.If(V.Local.bInList,=,True)
+		Gui.Form1.dropdownlistArea.Text(V.Local.sRet.trim)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.CallSub(Loadarea)
+		Gui.Form1.dropdownlistArea.AddItem(V.Local.sRet.Trim)
+		Gui.Form1.dropdownlistArea.Text(V.Local.sRet.Trim)
+	F.Intrinsic.Control.EndIf
+
+	V.Local.sRet.Set(V.ODBC.conX!rstB.FieldVal!DISPOSITION_BY)
+	Gui.Form1.dropdownlistDispBy.FindItem(V.Local.sRet.Trim,V.Local.bInList)
+	F.Intrinsic.Control.If(V.Local.bInList,=,True)
+		Gui.Form1.dropdownlistDispBy.Text(V.Local.sRet.Trim)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.CallSub(Loaddispby)
+		Gui.Form1.dropdownlistDispBy.AddItem(V.Local.sRet.Trim)
+		Gui.Form1.dropdownlistDispBy.Text(V.Local.sRet.Trim)
+	F.Intrinsic.Control.EndIf
+
+	V.Local.sRet.Set(V.ODBC.conX!rstB.FieldVal!REJECTION_POINT)
+	Gui.Form1.dropdownlistRejPt.FindItem(V.Local.sRet.Trim,V.Local.bInList)
+	F.Intrinsic.Control.If(V.Local.bInList,=,True)
+		Gui.Form1.dropdownlistRejPt.Text(V.Local.sRet.Trim)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.CallSub(Loadrejpt)
+		Gui.Form1.dropdownlistRejPt.AddItem(V.Local.sRet.Trim)
+		Gui.Form1.dropdownlistRejPt.Text(V.Local.sRet.Trim)
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rstB.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("dropdownlistseq_lostfocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_LOG.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.dropdownlistseq_lostfocus.end
+
+Program.Sub.FlagAllIIntInvUse.Start
+F.Intrinsic.Control.SetErrorHandler("FlagAllIIntInvUse_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'this sub sets the "internal inventory use" flags for all sequence records tied that NCMR in the custom table
+
+V.Local.sSql.Declare(String)
+
+F.Intrinsic.Control.If(V.Global.sIntInvFlag.Trim,=,"Y")
+	F.Intrinsic.String.Concat("update GCG_4041_NCMR_DSPLOG set FLAG_INTERNAL_ONLY = 'Y' where CONTROL_NUMBER = '",V.Global.sNCMR,"'",V.Local.sSql)
+	F.ODBC.Connection!conX.Execute(V.Local.sSql)
+F.Intrinsic.Control.Endif
+
+F.Intrinsic.Control.If(V.Global.sIntInvFlag.Trim,=,"N")
+	F.Intrinsic.String.Concat("update GCG_4041_NCMR_DSPLOG set FLAG_INTERNAL_ONLY = 'N' where CONTROL_NUMBER = '",V.Global.sNCMR,"'",V.Local.sSql)
+	F.ODBC.Connection!conX.Execute(V.Local.sSql)
+F.Intrinsic.Control.Endif
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("FlagAllIIntInvUse_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_LOG.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.FlagAllIIntInvUse.End
+
+Program.Sub.SetGAB-CHK-1.Start
+F.Intrinsic.Control.SetErrorHandler("SetGAB-CHK-1_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'set Internal Inventory Use Flag on Core Screen based on table
+V.Local.sSql.Declare(String)
+'F.Intrinsic.Debug.InvokeDebugger
+'F.Intrinsic.Debug.Stop
+
+F.Intrinsic.String.LPad(V.passed.000002,"0",7,V.Global.sNCMR)
+
+F.Intrinsic.String.Concat("select TOP 1 FLAG_INTERNAL_ONLY as FLAG from GCG_4041_NCMR_DSPLOG where CONTROL_NUMBER = '",V.Global.sNCMR,"'",V.Local.sSql)
+F.ODBC.Connection!conX.OpenRecordsetRO("rstC",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conX!rstC.EOF,<>,True)
+	F.Intrinsic.Control.If(V.ODBC.conX!rstC.FieldValLTrim!FLAG,=,"Y")
+		V.Passed.GAB-CHK-1.Set("Y")
+	F.Intrinsic.Control.Else
+		V.Passed.GAB-CHK-1.Set("N")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.conX!rstC.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SetGAB-CHK-1_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_LOG.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SetGAB-CHK-1.End
+
+Program.Sub.UpdGAB-CHK-1.Start
+F.Intrinsic.Control.SetErrorHandler("UpdGAB-CHK-1_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Passed.GAB-CHK-1.Set(V.Global.sIntInvFlag.Trim)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("UpdGAB-CHK-1_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_LOG.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.UpdGAB-CHK-1.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_NCMR_DISP_LOG$}$SFF$}$10/24/2014
+Program.Sub.Comments.End
+

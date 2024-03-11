@@ -1,0 +1,726 @@
+Program.Sub.ScreenSU.Start
+gui.Form1..create
+gui.Form1..caption("Maintain Disposition Values")
+gui.Form1..size(5580,3195)
+gui.Form1..minx(0)
+gui.Form1..miny(0)
+gui.Form1..position(0,0)
+gui.Form1..event(unload,form1_unload)
+gui.Form1..alwaysontop(False)
+gui.Form1..fontname("Arial")
+gui.Form1..fontsize(8)
+gui.Form1..forecolor(0)
+gui.Form1..fontstyle(,,,,)
+gui.Form1..BackColor(-2147483633)
+gui.Form1..controlbox(True)
+gui.Form1..maxbutton(True)
+gui.Form1..minbutton(True)
+gui.Form1..mousepointer(0)
+gui.Form1..moveable(True)
+gui.Form1..sizeable(False)
+gui.Form1..ShowInTaskBar(True)
+gui.Form1..titlebar(True)
+gui.Form1.tabDispByValues.create(tab)
+gui.Form1.tabDispByValues.tabs(3)
+gui.Form1.tabDispByValues.tabsperrow(3)
+gui.Form1.tabDispByValues.settab(0)
+gui.Form1.tabDispByValues.caption("Area")
+gui.Form1.tabDispByValues.settab(1)
+gui.Form1.tabDispByValues.caption("Disposition By")
+gui.Form1.tabDispByValues.settab(2)
+gui.Form1.tabDispByValues.caption("Rejection Point")
+gui.Form1.tabDispByValues.size(5010,2430)
+gui.Form1.tabDispByValues.position(75,100)
+gui.Form1.tabDispByValues.visible(True)
+gui.Form1.tabDispByValues.fontname("Arial")
+gui.Form1.tabDispByValues.fontsize(8)
+gui.Form1.txtAreaID.create(textbox,"",True,495,300,0,200,600,False,0,Arial,8,-2147483643,1)
+gui.Form1.txtAreaID.parent("tabdispbyvalues",0)
+gui.Form1.txtAreaID.defaultvalue("")
+gui.Form1.txtAreaID.controlgroup(0)
+gui.Form1.txtArea.create(textbox,"",True,3435,300,0,785,600,True,0,Arial,8,-2147483643,1)
+gui.Form1.txtArea.parent("tabdispbyvalues",0)
+gui.Form1.txtArea.defaultvalue("")
+gui.Form1.txtArea.controlgroup(0)
+gui.Form1.cmdSaveArea.create(button)
+gui.Form1.cmdSaveArea.caption("Save")
+gui.Form1.cmdSaveArea.visible(True)
+gui.Form1.cmdSaveArea.size(855,375)
+gui.Form1.cmdSaveArea.zorder(0)
+gui.Form1.cmdSaveArea.position(150,940)
+gui.Form1.cmdSaveArea.enabled(True)
+gui.Form1.cmdSaveArea.parent("tabdispbyvalues",0)
+gui.Form1.cmdSaveArea.fontname("Arial")
+gui.Form1.cmdSaveArea.fontsize(8)
+gui.Form1.cmdSaveArea.event(click,cmdsavearea_click)
+gui.Form1.cmdSaveArea.defaultvalue("")
+gui.Form1.cmdSaveArea.controlgroup(0)
+gui.Form1.cmdDeleteArea.create(button)
+gui.Form1.cmdDeleteArea.caption("Delete")
+gui.Form1.cmdDeleteArea.visible(True)
+gui.Form1.cmdDeleteArea.size(855,375)
+gui.Form1.cmdDeleteArea.zorder(0)
+gui.Form1.cmdDeleteArea.position(1050,940)
+gui.Form1.cmdDeleteArea.enabled(True)
+gui.Form1.cmdDeleteArea.parent("tabdispbyvalues",0)
+gui.Form1.cmdDeleteArea.fontname("Arial")
+gui.Form1.cmdDeleteArea.fontsize(8)
+gui.Form1.cmdDeleteArea.event(click,cmddeletearea_click)
+gui.Form1.cmdDeleteArea.defaultvalue("")
+gui.Form1.cmdDeleteArea.controlgroup(0)
+gui.Form1.lbl1.create(label,"ID:",True,480,255,1,200,400,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl1.parent("tabdispbyvalues",0)
+gui.Form1.lbl1.defaultvalue("")
+gui.Form1.lbl1.controlgroup(0)
+gui.Form1.lbl2.create(label,"Area:",True,1935,255,1,800,400,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl2.parent("tabdispbyvalues",0)
+gui.Form1.lbl2.defaultvalue("")
+gui.Form1.lbl2.controlgroup(0)
+gui.Form1.lbl3.create(label,"ID:",True,405,255,1,200,400,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl3.parent("tabdispbyvalues",1)
+gui.Form1.lbl3.defaultvalue("")
+gui.Form1.lbl3.controlgroup(0)
+gui.Form1.txtDispByID.create(textbox,"",True,450,300,0,200,600,False,0,Arial,8,-2147483643,1)
+gui.Form1.txtDispByID.parent("tabdispbyvalues",1)
+gui.Form1.txtDispByID.defaultvalue("")
+gui.Form1.txtDispByID.controlgroup(0)
+gui.Form1.lbl4.create(label,"Disposed By Name:",True,1935,255,1,800,400,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl4.parent("tabdispbyvalues",1)
+gui.Form1.lbl4.defaultvalue("")
+gui.Form1.lbl4.controlgroup(0)
+gui.Form1.txtDispByName.create(textbox,"",True,3420,300,0,800,600,True,0,Arial,8,-2147483643,1)
+gui.Form1.txtDispByName.parent("tabdispbyvalues",1)
+gui.Form1.txtDispByName.defaultvalue("")
+gui.Form1.txtDispByName.controlgroup(0)
+gui.Form1.cmdSaveDispByName.create(button)
+gui.Form1.cmdSaveDispByName.caption("Save")
+gui.Form1.cmdSaveDispByName.visible(True)
+gui.Form1.cmdSaveDispByName.size(855,375)
+gui.Form1.cmdSaveDispByName.zorder(0)
+gui.Form1.cmdSaveDispByName.position(150,940)
+gui.Form1.cmdSaveDispByName.enabled(True)
+gui.Form1.cmdSaveDispByName.parent("tabdispbyvalues",1)
+gui.Form1.cmdSaveDispByName.fontname("Arial")
+gui.Form1.cmdSaveDispByName.fontsize(8)
+gui.Form1.cmdSaveDispByName.event(click,cmdsavedispbyname_click)
+gui.Form1.cmdSaveDispByName.defaultvalue("")
+gui.Form1.cmdSaveDispByName.controlgroup(0)
+gui.Form1.cmdDeleteDispByName.create(button)
+gui.Form1.cmdDeleteDispByName.caption("Delete")
+gui.Form1.cmdDeleteDispByName.visible(True)
+gui.Form1.cmdDeleteDispByName.size(855,375)
+gui.Form1.cmdDeleteDispByName.zorder(0)
+gui.Form1.cmdDeleteDispByName.position(1050,940)
+gui.Form1.cmdDeleteDispByName.enabled(True)
+gui.Form1.cmdDeleteDispByName.parent("tabdispbyvalues",1)
+gui.Form1.cmdDeleteDispByName.fontname("Arial")
+gui.Form1.cmdDeleteDispByName.fontsize(8)
+gui.Form1.cmdDeleteDispByName.event(click,cmddeletedispbyname_click)
+gui.Form1.cmdDeleteDispByName.defaultvalue("")
+gui.Form1.cmdDeleteDispByName.controlgroup(0)
+gui.Form1.lbl5.create(label,"ID:",True,360,255,1,200,400,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl5.parent("tabdispbyvalues",2)
+gui.Form1.lbl5.defaultvalue("")
+gui.Form1.lbl5.controlgroup(0)
+gui.Form1.txtRejPtID.create(textbox,"",True,480,300,0,200,600,False,0,Arial,8,-2147483643,1)
+gui.Form1.txtRejPtID.parent("tabdispbyvalues",2)
+gui.Form1.txtRejPtID.defaultvalue("")
+gui.Form1.txtRejPtID.controlgroup(0)
+gui.Form1.lbl6.create(label,"Rejection Point:",True,1935,255,1,800,400,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl6.parent("tabdispbyvalues",2)
+gui.Form1.lbl6.defaultvalue("")
+gui.Form1.lbl6.controlgroup(0)
+gui.Form1.txtRejPtName.create(textbox,"",True,3420,300,0,800,600,True,0,Arial,8,-2147483643,1)
+gui.Form1.txtRejPtName.parent("tabdispbyvalues",2)
+gui.Form1.txtRejPtName.defaultvalue("")
+gui.Form1.txtRejPtName.controlgroup(0)
+gui.Form1.cmdSaveRejPt.create(button)
+gui.Form1.cmdSaveRejPt.caption("Save")
+gui.Form1.cmdSaveRejPt.visible(True)
+gui.Form1.cmdSaveRejPt.size(855,375)
+gui.Form1.cmdSaveRejPt.zorder(0)
+gui.Form1.cmdSaveRejPt.position(150,940)
+gui.Form1.cmdSaveRejPt.enabled(True)
+gui.Form1.cmdSaveRejPt.parent("tabdispbyvalues",2)
+gui.Form1.cmdSaveRejPt.fontname("Arial")
+gui.Form1.cmdSaveRejPt.fontsize(8)
+gui.Form1.cmdSaveRejPt.event(click,cmdsaverejpt_click)
+gui.Form1.cmdSaveRejPt.defaultvalue("")
+gui.Form1.cmdSaveRejPt.controlgroup(0)
+gui.Form1.cmdDeleteRejPt.create(button)
+gui.Form1.cmdDeleteRejPt.caption("Delete")
+gui.Form1.cmdDeleteRejPt.visible(True)
+gui.Form1.cmdDeleteRejPt.size(855,375)
+gui.Form1.cmdDeleteRejPt.zorder(0)
+gui.Form1.cmdDeleteRejPt.position(1050,940)
+gui.Form1.cmdDeleteRejPt.enabled(True)
+gui.Form1.cmdDeleteRejPt.parent("tabdispbyvalues",2)
+gui.Form1.cmdDeleteRejPt.fontname("Arial")
+gui.Form1.cmdDeleteRejPt.fontsize(8)
+gui.Form1.cmdDeleteRejPt.event(click,cmddeleterejpt_click)
+gui.Form1.cmdDeleteRejPt.defaultvalue("")
+gui.Form1.cmdDeleteRejPt.controlgroup(0)
+gui.Form1.cmdBrwsArea.create(button)
+gui.Form1.cmdBrwsArea.caption("^")
+gui.Form1.cmdBrwsArea.visible(True)
+gui.Form1.cmdBrwsArea.size(405,375)
+gui.Form1.cmdBrwsArea.zorder(0)
+gui.Form1.cmdBrwsArea.position(4250,540)
+gui.Form1.cmdBrwsArea.enabled(True)
+gui.Form1.cmdBrwsArea.parent("tabdispbyvalues",0)
+gui.Form1.cmdBrwsArea.fontname("Arial")
+gui.Form1.cmdBrwsArea.fontsize(8)
+gui.Form1.cmdBrwsArea.event(click,cmdbrwsarea_click)
+gui.Form1.cmdBrwsArea.defaultvalue("")
+gui.Form1.cmdBrwsArea.controlgroup(0)
+gui.Form1.cmdBrwsDispBy.create(button)
+gui.Form1.cmdBrwsDispBy.caption("^")
+gui.Form1.cmdBrwsDispBy.visible(True)
+gui.Form1.cmdBrwsDispBy.size(420,375)
+gui.Form1.cmdBrwsDispBy.zorder(0)
+gui.Form1.cmdBrwsDispBy.position(4250,540)
+gui.Form1.cmdBrwsDispBy.enabled(True)
+gui.Form1.cmdBrwsDispBy.parent("tabdispbyvalues",1)
+gui.Form1.cmdBrwsDispBy.fontname("Arial")
+gui.Form1.cmdBrwsDispBy.fontsize(8)
+gui.Form1.cmdBrwsDispBy.event(click,cmdbrwsdispby_click)
+gui.Form1.cmdBrwsDispBy.defaultvalue("")
+gui.Form1.cmdBrwsDispBy.controlgroup(0)
+gui.Form1.cmdBrwsRejPt.create(button)
+gui.Form1.cmdBrwsRejPt.caption("^")
+gui.Form1.cmdBrwsRejPt.visible(True)
+gui.Form1.cmdBrwsRejPt.size(390,375)
+gui.Form1.cmdBrwsRejPt.zorder(0)
+gui.Form1.cmdBrwsRejPt.position(4250,540)
+gui.Form1.cmdBrwsRejPt.enabled(True)
+gui.Form1.cmdBrwsRejPt.parent("tabdispbyvalues",2)
+gui.Form1.cmdBrwsRejPt.fontname("Arial")
+gui.Form1.cmdBrwsRejPt.fontsize(8)
+gui.Form1.cmdBrwsRejPt.event(click,cmdbrwsrejpt_click)
+gui.Form1.cmdBrwsRejPt.defaultvalue("")
+gui.Form1.cmdBrwsRejPt.controlgroup(0)
+gui.Form1.cmdClearArea.create(button)
+gui.Form1.cmdClearArea.caption("Clear/New")
+gui.Form1.cmdClearArea.visible(True)
+gui.Form1.cmdClearArea.size(930,375)
+gui.Form1.cmdClearArea.zorder(0)
+gui.Form1.cmdClearArea.position(1950,940)
+gui.Form1.cmdClearArea.enabled(True)
+gui.Form1.cmdClearArea.parent("tabdispbyvalues",0)
+gui.Form1.cmdClearArea.fontname("Arial")
+gui.Form1.cmdClearArea.fontsize(8)
+gui.Form1.cmdClearArea.event(click,cmdcleararea_click)
+gui.Form1.cmdClearArea.defaultvalue("")
+gui.Form1.cmdClearArea.controlgroup(0)
+gui.Form1.cmdClearDisp.create(button)
+gui.Form1.cmdClearDisp.caption("Clear/New")
+gui.Form1.cmdClearDisp.visible(True)
+gui.Form1.cmdClearDisp.size(930,375)
+gui.Form1.cmdClearDisp.zorder(0)
+gui.Form1.cmdClearDisp.position(1950,940)
+gui.Form1.cmdClearDisp.enabled(True)
+gui.Form1.cmdClearDisp.parent("tabdispbyvalues",1)
+gui.Form1.cmdClearDisp.fontname("Arial")
+gui.Form1.cmdClearDisp.fontsize(8)
+gui.Form1.cmdClearDisp.event(click,cmdcleardisp_click)
+gui.Form1.cmdClearDisp.defaultvalue("")
+gui.Form1.cmdClearDisp.controlgroup(0)
+gui.Form1.cmdClearRej.create(button)
+gui.Form1.cmdClearRej.caption("Clear/New")
+gui.Form1.cmdClearRej.visible(True)
+gui.Form1.cmdClearRej.size(915,375)
+gui.Form1.cmdClearRej.zorder(0)
+gui.Form1.cmdClearRej.position(1950,940)
+gui.Form1.cmdClearRej.enabled(True)
+gui.Form1.cmdClearRej.parent("tabdispbyvalues",2)
+gui.Form1.cmdClearRej.fontname("Arial")
+gui.Form1.cmdClearRej.fontsize(8)
+gui.Form1.cmdClearRej.event(click,cmdclearrej_click)
+gui.Form1.cmdClearRej.defaultvalue("")
+gui.Form1.cmdClearRej.controlgroup(0)
+gui.Form1.txtArea.tabstop(True)
+gui.Form1.txtArea.tabindex(1)
+gui.Form1.cmdBrwsArea.tabstop(True)
+gui.Form1.cmdBrwsArea.tabindex(2)
+gui.Form1.cmdSaveArea.tabstop(True)
+gui.Form1.cmdSaveArea.tabindex(3)
+gui.Form1.cmdDeleteArea.tabstop(True)
+gui.Form1.cmdDeleteArea.tabindex(4)
+gui.Form1.txtDispByName.tabstop(True)
+gui.Form1.txtDispByName.tabindex(5)
+gui.Form1.cmdBrwsDispBy.tabstop(True)
+gui.Form1.cmdBrwsDispBy.tabindex(6)
+gui.Form1.cmdSaveDispByName.tabstop(True)
+gui.Form1.cmdSaveDispByName.tabindex(7)
+gui.Form1.cmdDeleteDispByName.tabstop(True)
+gui.Form1.cmdDeleteDispByName.tabindex(8)
+gui.Form1.txtRejPtName.tabstop(True)
+gui.Form1.txtRejPtName.tabindex(9)
+gui.Form1.cmdBrwsRejPt.tabstop(True)
+gui.Form1.cmdBrwsRejPt.tabindex(10)
+gui.Form1.cmdSaveRejPt.tabstop(True)
+gui.Form1.cmdSaveRejPt.tabindex(11)
+gui.Form1.cmdDeleteRejPt.tabstop(True)
+gui.Form1.cmdDeleteRejPt.tabindex(12)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Coded By:SFF
+'10/22/2014
+'Customer Specific NCMR Disposition Maintenance Program to store values for NCMR Disposition Log
+
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+F.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+Gui.Form1.tabDispByValues.SetFocus
+Gui.Form1.txtArea.SetFocus
+Gui.Form1..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+program.sub.cmdsavearea_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdsavearea_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sArea.Declare(String)
+V.Local.sAreal.Declare(String)
+V.Local.sAreaID.Declare(String)
+'Save/Update Area
+V.Local.sAreaID.Set(V.Screen.Form1!txtAreaID.Text)
+V.Local.sArea.Set(V.Screen.Form1!txtArea.Text)
+F.Intrinsic.Control.If(V.Local.sAreaID,<>,"")
+	F.Intrinsic.String.Concat("update GCG_4041_DSP_AREAMNT set AREA = '",V.Local.sArea.Trim,"' where AREA_ID = ",V.Local.sAreaID.Trim,V.Local.sSql)
+	F.ODBC.Connection!conX.Execute(V.Local.sSql)
+	Gui.Form1.txtArea.Text("")
+	Gui.Form1.txtAreaID.Text("")
+	Gui.Form1.cmdSaveArea.Caption("Save")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Concat("insert into GCG_4041_DSP_AREAMNT (AREA) VALUES ('",V.Local.sArea.Trim,"')",V.Local.sSql)
+	F.ODBC.Connection!conX.Execute(V.Local.sSql)
+	Gui.Form1.txtArea.Text("")
+	Gui.Form1.txtAreaID.Text("")
+	Gui.Form1.cmdSaveArea.Caption("Save")
+F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsavearea_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdsavearea_click.end
+
+program.sub.cmddeletearea_click.start
+F.Intrinsic.Control.SetErrorHandler("cmddeletearea_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sArea.Declare(String)
+'Delete Area
+V.Local.sArea.Set(V.Screen.Form1!txtArea.Text)
+F.Intrinsic.Control.If(V.Local.sArea.Trim,<>,"")
+	F.Intrinsic.String.UCase(V.Local.sArea.Trim,V.Local.sArea)
+	F.Intrinsic.String.Concat("select upper(area) as area from GCG_4041_DSP_AREAMNT where upper(area) = '",V.Local.sArea,"'",V.Local.sSql)
+	F.ODBC.Connection!conX.OpenRecordsetRW("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+		F.Intrinsic.String.Concat("delete from GCG_4041_DSP_AREAMNT where upper(area) = '",V.Local.sArea,"'",V.Local.sSql)
+		F.ODBC.Connection!conX.Execute(V.Local.sSql)
+		Gui.Form1.txtArea.Text("")
+		Gui.Form1.txtAreaID.Text("")
+		Gui.Form1.cmdSaveArea.Caption("Save")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("No Records Match Area","No Records Deleted")
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rst.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddeletearea_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmddeletearea_click.end
+
+program.sub.cmdsavedispbyname_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdsavedispbyname_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sDispBy.Declare(String)
+V.Local.sDispByID.Declare(String)
+
+'Save/Update Disposition By
+V.Local.sDispBy.Set(V.Screen.Form1!txtDispByName.Text)
+V.Local.sDispByID.Set(V.Screen.Form1!txtDispByID.Text)
+F.Intrinsic.Control.If(V.Local.sDispByID.Trim,<>,"")
+	F.Intrinsic.String.Concat("update GCG_4041_DISP_BY_MNT set DISPOSITION_BY = '",V.Local.sDispBy.Trim,"' where DISP_BY_ID = ",V.Local.sDispByID.Trim,V.Local.sSql)
+	F.ODBC.Connection!conX.Execute(V.Local.sSql)
+	Gui.Form1.txtDispByName.Text("")
+	Gui.Form1.txtDispByID.Text("")
+	Gui.Form1.cmdSaveDispByName.caption("Save")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Concat("insert into GCG_4041_DISP_BY_MNT (DISPOSITION_BY) VALUES ('",V.Local.sDispBy.Trim,"')",V.Local.sSql)
+	F.ODBC.Connection!conX.Execute(V.Local.sSql)
+	Gui.Form1.txtDispByName.Text("")
+	Gui.Form1.txtDispByID.Text("")
+	Gui.Form1.cmdSaveDispByName.caption("Save")
+F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsavedispbyname_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdsavedispbyname_click.end
+
+program.sub.cmddeletedispbyname_click.start
+F.Intrinsic.Control.SetErrorHandler("cmddeletedispbyname_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sDispBy.Declare(String)
+'Delete Disposition By
+V.Local.sDispBy.Set(V.Screen.Form1!txtDispByName.Text)
+F.Intrinsic.Control.If(V.Local.sDispBy.Trim,<>,"")
+	F.Intrinsic.String.UCase(V.Local.sDispBy.Trim,V.Local.sDispBy)
+	F.Intrinsic.String.Concat("select upper(DISPOSITION_BY) as area from GCG_4041_DISP_BY_MNT where upper(DISPOSITION_BY) = '",V.Local.sDispBy,"'",V.Local.sSql)
+	F.ODBC.Connection!conX.OpenRecordsetRW("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+		F.Intrinsic.String.Concat("delete from GCG_4041_DISP_BY_MNT where upper(DISPOSITION_BY) = '",V.Local.sDispBy,"'",V.Local.sSql)
+		F.ODBC.Connection!conX.Execute(V.Local.sSql)
+		Gui.Form1.txtDispByName.Text("")
+		Gui.Form1.txtDispByID.Text("")
+		Gui.Form1.cmdSaveDispByName.Caption("Save")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("No Records Match Disposition By Name","No Records Deleted")
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rst.Close
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddeletedispbyname_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmddeletedispbyname_click.end
+
+program.sub.cmdsaverejpt_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdsaverejpt_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sRejPt.Declare(String)
+V.Local.sRejPtID.Declare(String)
+'Save / Update Rejection Point
+V.Local.sRejPt.Set(V.Screen.Form1!txtRejPtName.Text)
+V.Local.sRejPtID.Set(V.Screen.Form1!txtRejPtID.Text)
+F.Intrinsic.Control.If(V.Local.sRejPtID.Trim,<>,"")
+	F.Intrinsic.String.Concat("update GCG_4041_REJ_PT_MNT set REJECTION_POINT = '",V.Local.sRejPt.Trim,"' where upper(REJ_PT_ID) = ",V.Local.sRejPtID.Trim,V.Local.sSql)
+	F.ODBC.Connection!conX.Execute(V.Local.sSql)
+	Gui.Form1.txtRejPtName.Text("")
+	Gui.Form1.txtRejPtID.Text("")
+	Gui.Form1.cmdSaveRejPt.Caption("Save")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Concat("insert into GCG_4041_REJ_PT_MNT (REJECTION_POINT) VALUES ('",V.Local.sRejPt.Trim,"')",V.Local.sSql)
+	F.ODBC.Connection!conX.Execute(V.Local.sSql)
+	Gui.Form1.txtRejPtName.Text("")
+	Gui.Form1.txtRejPtID.Text("")
+	Gui.Form1.cmdSaveRejPt.Caption("Save")
+F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsaverejpt_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdsaverejpt_click.end
+
+program.sub.cmddeleterejpt_click.start
+F.Intrinsic.Control.SetErrorHandler("cmddeleterejpt_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sRejPt.Declare(String)
+'Delete Rejection Point
+V.Local.sRejPt.Set(V.Screen.Form1!txtRejPtName.Text)
+F.Intrinsic.Control.If(V.Local.sRejPt.Trim,<>,"")
+	F.Intrinsic.String.UCase(V.Local.sRejPt.Trim,V.Local.sRejPt)
+	F.Intrinsic.String.Concat("select upper(REJECTION_POINT) as area from GCG_4041_REJ_PT_MNT where upper(REJECTION_POINT) = '",V.Local.sRejPt,"'",V.Local.sSql)
+	F.ODBC.Connection!conX.OpenRecordsetRW("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,<>,True)
+		F.Intrinsic.String.Concat("delete from GCG_4041_REJ_PT_MNT where upper(REJECTION_POINT) = '",V.Local.sRejPt,"'",V.Local.sSql)
+		F.ODBC.Connection!conX.Execute(V.Local.sSql)
+		Gui.Form1.txtRejPtName.Text("")
+		Gui.Form1.txtRejPtID.Text("")
+		Gui.Form1.cmdSaveRejPt.Caption("Save")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("No Records Match Rejection Point","No Records Deleted")
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rst.Close
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddeleterejpt_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmddeleterejpt_click.end
+
+program.sub.cmdbrwsarea_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdbrwsarea_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+'Browser for Area
+F.Intrinsic.String.Concat("select Area_ID,Area from GCG_4041_DSP_AREAMNT Order by Area Asc",,V.Local.sSql)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.String.Split("ID*!*Area","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*4000","*!*",V.Local.iWidths)
+F.Intrinsic.UI.Browser("Select and Area","conX",V.Local.sSql,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.Form1.txtAreaID.Text(V.Local.sRet(0))
+	Gui.Form1.txtArea.Text(V.Local.sRet(1))
+	Gui.Form1.txtArea.SetFocus
+	Gui.Form1.cmdSaveArea.Caption("Update")
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdbrwsarea_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdbrwsarea_click.end
+
+program.sub.cmdbrwsrejpt_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdbrwsrejpt_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+'Browser for Rejection Point
+F.Intrinsic.String.Concat("select Rej_PT_ID,Rejection_Point from GCG_4041_REJ_PT_MNT Order by Rejection_Point Asc",,V.Local.sSql)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.String.Split("ID*!*Rejection Point","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*4000","*!*",V.Local.iWidths)
+F.Intrinsic.UI.Browser("Select a Rejection Point","conX",V.Local.sSql,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.Form1.txtRejPtID.Text(V.Local.sRet(0))
+	Gui.Form1.txtRejPtName.Text(V.Local.sRet(1))
+	Gui.Form1.txtRejPtName.SetFocus
+	Gui.Form1.cmdSaveRejPt.Caption("Update")
+F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdbrwsrejpt_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdbrwsrejpt_click.end
+
+program.sub.cmdbrwsdispby_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdbrwsdispby_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+'Browser for Disposition By
+F.Intrinsic.String.Concat("select DISP_BY_ID,DISPOSITION_BY from GCG_4041_DISP_BY_MNT Order By DISPOSITION_BY Asc",,V.Local.sSql)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.String.Split("ID*!*Disposition By Name","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*4000","*!*",V.Local.iWidths)
+F.Intrinsic.UI.Browser("Select Disposition By","conX",V.Local.sSql,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.Form1.txtDispByID.Text(V.Local.sRet(0))
+	Gui.Form1.txtDispByName.Text(V.Local.sRet(1))
+	Gui.Form1.txtDispByName.SetFocus
+	Gui.Form1.cmdSaveDispByName.Caption("Update")
+F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdbrwsdispby_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdbrwsdispby_click.end
+
+program.sub.form1_unload.start
+F.Intrinsic.Control.End
+
+program.sub.form1_unload.end
+
+program.sub.cmdcleararea_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdcleararea_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Clear Area Screen
+Gui.Form1.txtArea.Text("")
+Gui.Form1.txtAreaID.Text("")
+Gui.Form1.cmdSaveArea.Caption("Save")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdcleararea_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdcleararea_click.end
+
+program.sub.cmdcleardisp_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdcleardisp_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Clear Disposition By screen
+Gui.Form1.txtDispByName.Text("")
+Gui.Form1.txtDispByID.Text("")
+Gui.Form1.cmdSaveDispByName.caption("Save")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdcleardisp_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdcleardisp_click.end
+
+program.sub.cmdclearrej_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdclearrej_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Clear Rejection Screen
+Gui.Form1.txtRejPtName.Text("")
+Gui.Form1.txtRejPtID.Text("")
+Gui.Form1.cmdSaveRejPt.Caption("Save")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdclearrej_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4041_NCMR_DISP_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdclearrej_click.end
+
+
